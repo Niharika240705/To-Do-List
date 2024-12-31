@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="overlay"></div>
+  <div id="add-task-modal">
+    <h2>Add New Task</h2>
+    <input type="text" id="task-title" placeholder="Task Title">
+    <textarea id="task-desc" placeholder="Description (optional)"></textarea>
+    <input type="date" id="due-date">
+    <select id="priority">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button onclick="saveTask()">Save Task</button>
+    <button onclick="closeModal()">Cancel</button>
+  </div>
+
+  <div class="container">
+    <header>
+      <input type="text" id="search-bar" placeholder="Search tasks...">
+      <button onclick="toggleModal()">Add New Task</button>
+    </header>
+    <div class="categories">
+      <button>All Tasks</button>
+      <button>Work</button>
+      <button>Personal</button>
+      <button>Urgent</button>
+    </div>
+    <ul class="task-list" id="task-list">
+      <!-- Tasks will appear here -->
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
